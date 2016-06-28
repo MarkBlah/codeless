@@ -1,0 +1,7 @@
+{  
+  "name": "FujeTv",  
+  "short_name": "FujeTv",  
+  "display": "standalone",  
+  "gcm_sender_id": "479766426271", // Your GCM Project Number
+  "gcm_user_visible_only": true
+}
