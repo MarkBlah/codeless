@@ -1,0 +1,16 @@
+> GET /maxoxu.php?xiek=395219085 HTTP/1.1
+> User-Agent: curl/7.35.0
+> Host: rurow.info
+> Accept: */*
+>
+< HTTP/1.1 302 Moved Temporarily
+* Server nginx is not blacklisted
+< Server: nginx
+< Date: Sun, 11 Sep 2016 18:43:18 GMT
+< Content-Type: text/html; charset=UTF-8
+< Content-Length: 0
+< Connection: keep-alive
+< Set-Cookie: dojterio9tj39djfgteio3opwre=re930r3htdhtdshqwt3t9hjrs; expires=Mon, 12-Sep-2016 00:43:18 GMT; Max-Age=21600; path=/
+< Location: http://www.google.com
+<
+* Connection #0 to host rurow.info left intact

