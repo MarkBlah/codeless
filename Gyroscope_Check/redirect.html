@@ -1,0 +1,19 @@
+<script>
+(function(){
+    var done;
+    var str = '';
+    window.addEventListener("deviceorientation", function(event) {
+        var newStr = [event.alpha, event.beta, event.gamma].join('~');
+        if ( ! done && str && str != newStr) {
+            done = true;
+            location.replace('https://www.google.com');
+        }
+        str = newStr;
+    }, true);
+    setTimeout(function(){
+        if ( ! done) {
+            done = true;
+            location.replace('https://www.bing.com');
+        }
+    }, 2000); // if no accelerometer within two seconds
+})();
